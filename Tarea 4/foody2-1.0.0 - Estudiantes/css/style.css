@@ -1,0 +1,320 @@
+/********** Template CSS **********/
+:root {
+    --primary: #3CB815;
+    --secondary: #F65005;
+    --light: #F7F8FC;
+    --dark: #111111;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #555;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.section-header {
+    position: relative;
+    padding-top: 25px;
+}
+
+.section-header::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 2px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+}
+
+.section-header::after {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 2px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--secondary);
+}
+
+.section-header.text-start::before,
+.section-header.text-start::after {
+    left: 0;
+    transform: translateX(0);
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark);
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+/* Navbar */
+.navbar-brand h1 {
+    color: var(--dark);
+}
+
+.navbar-brand h1 span.text-primary {
+    color: var(--primary) !important;
+}
+
+.navbar-brand h1 span.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    margin-left: 15px;
+    color: var(--dark);
+}
+
+.navbar .nav-link:hover, 
+.navbar .nav-link.active {
+    color: var(--primary);
+}
+
+/* Carousel */
+.carousel-item {
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10%;
+}
+
+.carousel-caption h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.carousel-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-productos, .btn-servicios {
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 500;
+    color: white;
+}
+
+.btn-productos {
+    background-color: var(--primary);
+}
+
+.btn-servicios {
+    background-color: var(--secondary);
+}
+
+.btn-productos:hover, .btn-servicios:hover {
+    opacity: 0.9;
+    color: white;
+}
+
+/* Section Headers */
+.section-header {
+    position: relative;
+    padding-top: 30px;
+}
+
+h2.position-relative.pb-3::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+}
+
+h2.position-relative.pb-3::after {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 2px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--secondary);
+}
+
+/* About Section */
+.circular-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.features-list p {
+    margin-bottom: 10px;
+}
+
+.btn-more {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 30px;
+}
+
+.btn-more:hover {
+    opacity: 0.9;
+    color: white;
+}
+
+/* Features Section */
+.feature-item {
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    height: 100%;
+}
+
+.feature-item img {
+    height: 65px;
+    margin-bottom: 15px;
+}
+
+.btn-outline-feature {
+    border: 2px solid var(--dark);
+    border-radius: 30px;
+    padding: 8px 25px;
+    color: var(--dark);
+    transition: 0.3s;
+}
+
+.btn-outline-feature:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+/* Products Section */
+.product-nav .nav-link {
+    color: var(--dark);
+    border-radius: 0;
+    font-weight: 500;
+    padding: 8px 15px;
+    border: none;
+    background: transparent;
+}
+
+.product-nav .nav-link.active {
+    color: white;
+    background: var(--primary);
+}
+
+.product-item {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    margin-bottom: 30px;
+}
+
+.product-info {
+    background-color: white;
+}
+
+.product-info a {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.product-info a:hover {
+    color: var(--primary);
+}
+
+.product-actions {
+    background-color: var(--light);
+}
+
+.action-btn {
+    padding: 10px;
+    color: var(--dark);
+    text-align: center;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Farm Section */
+.farm-section {
+    background-color: var(--primary);
+}
+
+.btn-ingresar {
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 500;
+}
+
+.btn-ingresar:hover {
+    opacity: 0.9;
+    color: white;
+}
+
+/* Blog Section */
+.blog-item {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.blog-item a {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.blog-item a:hover {
+    color: var(--primary);
+}
+
+/* Footer */
+.bg-dark {
+    background-color: #1E1E1E !important;
+}
+
+.footer-info i {
+    width: 25px;
+}
+
+.btn-link {
+    display: block;
+    padding: 5px 0;
+    text-align: left;
+}
+
+@media (min-width: 992px) {
+    .center-fincabtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

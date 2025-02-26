@@ -1,0 +1,16 @@
+
+.info-blog img {
+    width: 100%;
+}
+.info-blog div {
+    background-color: rgb(240, 240, 241);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.info-blog div a{
+    color: black;
+    font-weight: bold;
+}
